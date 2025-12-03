@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: #0d1a26;
+  background-color: #f7f7f7;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #0d1a26;
+}
+section {
+  padding: 60px 5%;
+  min-height: 100vh;
+}
+/* --- Navigation Bar --- */
+.Navbar {
+  background-color: #f7f7f7;
+  color: #0d1a26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
