@@ -1,3 +1,10 @@
+/*color set
+#f7f4ef 
+#342628for navber same for footer
+#FEAA00 for one of the h
+for logo #788402
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +35,8 @@ section {
 }
 /* --- Navigation Bar --- */
 .Navbar {
-  background-color: #f7f7f7;
-  color: #0d1a26;
+  background-color: #342628;
+  color: #f7f4ef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,4 +45,67 @@ section {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f7f4ef;
+}
+.logo span {
+  color: #788402;
+}
+.Navbar ul {
+  list-style: none;
+  display: flex;
+}
+.Navbar ul li a {
+  color: #f7f4ef;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 8px;
+}
+.Navbar ul li a:hover {
+  color: #f7f4ef;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.cta-button {
+  display: inline-block;
+  background-color: #f7f7f7;
+  color: #788402;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.cta-button:hover {
+  background-color: #342628;
+  transform: translateY(-2px);
+}
+.hero-section {
+  background-image: url(/image/freestocks-_3Q3tsJ01nc-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  /* color: #feaa00;*/
+  color: #788402;
+}
+.hero-section p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.15rem;
+  color: #f5f5f5;
 }
