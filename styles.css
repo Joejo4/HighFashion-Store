@@ -126,6 +126,20 @@ section {
   overflow: hidden;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%; /* Default to full width on mobile */
-  max-width: 300px; /* Max size for each card */
+  width: 100%;
+  max-width: 300px;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.card-details {
+  padding: 1rem;
+  text-align: center;
 }
