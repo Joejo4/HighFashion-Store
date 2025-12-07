@@ -1,10 +1,3 @@
-/*color set
-#f7f4ef 
-#342628for navber same for footer
-#FEAA00 for one of the h
-for logo #788402
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +7,7 @@ for logo #788402
 body {
   font-family: "Inter", sans-serif;
   color: #0d1a26;
-  background-color: #f7f7f7;
+  background-color: #f7f4ef;
   line-height: 1.6;
 }
 h1,
@@ -91,7 +84,7 @@ section {
   background-position: center;
   width: 100%;
   height: auto;
-  color: #f7f7f7;
+  color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +93,7 @@ section {
 .hero-section h1 {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  /* color: #feaa00;*/
+
   color: #788402;
 }
 .hero-section p {
@@ -111,6 +104,7 @@ section {
   color: #adadc9;
 }
 .product-section h2 {
+  color: #342628;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
@@ -121,7 +115,7 @@ section {
   gap: 30px; /* Space between rows and columns */
 }
 .product-card {
-  background-color: #fff;
+  background-color: #f7f4ef;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
@@ -135,11 +129,108 @@ section {
 }
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 85%;
   display: block;
   object-fit: cover;
 }
 .card-details {
   padding: 1rem;
   text-align: center;
+}
+.product-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #342628;
+}
+.product-price {
+  color: #788402;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.contact-section {
+  background-color: #f7f4ef;
+  color: #342628;
+  text-align: center;
+}
+.contact-section h2 {
+  margin-bottom: 2rem;
+  color: #342628;
+}
+.contact-form {
+  margin: 0 auto;
+  text-align: left;
+  color: #f7f4ef;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #342628;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.form-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+footer {
+  background-color: #342628;
+  color: #f7f4ef;
+  text-align: center;
+  padding: 1.5rem 5%;
+}
+
+@media (min-width: 640px) {
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .product-card {
+    width: calc(50% - 15px);
+  }
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1rem calc((100% - 1200px) / 2);
+  }
+
+  .hero-section h1 {
+    font-size: 5rem;
+  }
+
+  .product-card {
+    width: calc(33.333% - 20px);
+  }
+
+  .product-catalog {
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
