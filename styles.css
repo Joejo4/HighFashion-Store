@@ -78,6 +78,31 @@ section {
   background-color: #342628;
   transform: translateY(-2px);
 }
+
+.filter-controls {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 0 10px;
+  /* Using flex for better alignment on smaller screens */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.filter-controls button {
+  background-color: #342628;
+  color: #f7f4ef;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.filter-controls button:hover {
+  background-color: #788402;
+  transform: translateY(-2px);
+}
 .hero-section {
   background-image: url(/image/freestocks-_3Q3tsJ01nc-unsplash.jpg);
   background-size: cover;

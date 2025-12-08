@@ -40,10 +40,18 @@
       <section class="product-section" id="product">
         <h2>Our Exclusive Watch Collection</h2>
 
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">
+            All Products
+          </button>
+          <button class="filter-btn" data-filter="watch">Watches</button>
+          <button class="filter-btn" data-filter="bag">Bags</button>
+          <button class="filter-btn" data-filter="shoe">Shoes</button>
+        </div>
         <!--product-catalog-->
 
         <div class="product-catalog">
-          <div class="product-card">
+          <div class="product-card" data-category="watch">
             <img
               src="/image/rolex-463010_1280.jpg"
               alt="Chronos Master Watch"
@@ -54,7 +62,7 @@
               <p class="product-price">$5,500</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="watch">
             <img
               src="/image/Ariel Diver 300.jpg"
               alt="Chronos Master Watch"
@@ -65,7 +73,7 @@
               <p class="product-price">$3,150</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="watch">
             <img
               src="/image/Vintage Pilot II.jpg"
               alt="Chronos Master Watch"
@@ -76,7 +84,7 @@
               <p class="product-price">$6,000</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="shoe">
             <img
               src="/image/italian shoe.jpg"
               alt="Chronos Master Watch"
@@ -87,7 +95,7 @@
               <p class="product-price">$1,800</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="shoe">
             <img
               src="/image/leather ankle.jpg"
               alt="Chronos Master Watch"
@@ -98,7 +106,7 @@
               <p class="product-price">$5,000</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="shoe">
             <img
               src="/image/winter shoe.jpg"
               alt="Elegant Luna Watch"
@@ -109,7 +117,7 @@
               <p class="product-price">$2,999</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="shoe">
             <img
               src="/image/winter shoe.jpg"
               alt="Elegant Luna Watch"
@@ -120,7 +128,7 @@
               <p class="product-price">$2,999</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="bag">
             <img
               src="/image/Fashion.jpg"
               alt="Racing Strap GT Watch"
@@ -131,7 +139,7 @@
               <p class="product-price">$2,800</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="bag">
             <img
               src="/image/Classic bag.jpg"
               alt="Apex Skeleton Watch"
@@ -142,7 +150,7 @@
               <p class="product-price">$12,000</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="bag">
             <img
               src="/image/Classic bag.jpg"
               alt="Apex Skeleton Watch"
@@ -153,7 +161,7 @@
               <p class="product-price">$12,000</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="bag">
             <img
               src="/image/Hand bag.jpg"
               alt="Oceanic GMT Watch"
@@ -164,7 +172,7 @@
               <p class="product-price">$1,500</p>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card" data-category="bag">
             <img
               src="/image/leather cross bag.jpg"
               alt="Classic Slimline Watch"
@@ -218,5 +226,45 @@
       <p>&copy; 2025 Luxury Collection. All rights reserved.</p>
       <p>Designed by Joejo.</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const productCards = document.querySelectorAll(".product-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filterCategory = button.getAttribute("data-filter");
+
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            filterProducts(filterCategory);
+          });
+        });
+
+        // Filtering function
+        function filterProducts(category) {
+          productCards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+
+            if (category === "all" || cardCategory === category) {
+              card.style.opacity = "1";
+              card.style.display = "block";
+              card.style.pointerEvents = "auto";
+              card.style.order = "0";
+
+              setTimeout(() => (card.style.height = "auto"), 50);
+            } else {
+              card.style.opacity = "0";
+              card.style.pointerEvents = "none";
+              card.style.height = "0";
+              card.style.order = "1";
+              setTimeout(() => (card.style.display = "none"), 300);
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
